@@ -1,16 +1,22 @@
 # student managment
 
 #student
-dic={}
-alls=0
-average=0
-print("Main menu",'1.student add','2.display student','3.Exit',sep='    ')
+dic=[]
 
-def advrage(st,alls):
-    for key,value in st.items():
-        alls += value
-        average=alls/len(st)
+
+print("Main menu",'1.student add','2.display student','3.Exit',sep='    ')
+#平均、合計出す
+def advrage(dic):
+    alls=0
+    n=0
+    for st in dic:
+        for value in st.values():
+            alls += value
+            n +=1
+            
+    average=alls/ n #len(dic)
     print(alls,average)
+    return  average
 
 
 while 1:
@@ -20,16 +26,15 @@ while 1:
             name=input("input the students name")
             score=int(input("input the students score"))
             st={name:score}
-            dic=st
-            advrage(st,alls)
-
-            
+            dic.append(st)
+            advrage(dic)
+    
         elif inputs==2:
             print(dic)
-            f=input("If you want to search student name press 1 if not 2: ")
+            f=int(input("If you want to search student name press 1 if not 2: "))
             if f==2:
                 break
-            elif 1:
+            elif f==1:
                 s=input("Enter the exact name: ")
                 n=0
                 for a,b in st.items():
@@ -41,12 +46,10 @@ while 1:
                     else:
                         n+=1
                         continue
-                    
-
+                
         elif inputs==3:
             print("Exit")
             break
     except:
         print("invalid selection")
         
-    
