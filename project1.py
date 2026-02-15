@@ -1,26 +1,58 @@
 # student managment
-
-#student
+#これから課題3
+#menu
 dic=[]
+print("Main menu",'1.student add','2.display student','3.Search student','4.Exit',sep='    ')
 
-
-print("Main menu",'1.student add','2.display student','3.Exit',sep='    ')
 #平均、合計出す
-def advrage(dic):
-    alls=0
-    n=0
-    for st in dic:
-        for value in st.values():
+def advrage(students):
+    alls=n=0
+    for student in students:
+        for value in student.values():
             alls += value
-            n +=1
-            
+            n +=1        
     average=alls/ n #len(dic)
     print(alls,average)
     return  average
 
+#学生データを“探す"
+def st_search(students,find):
+    n=0
+    find =False
+    for student in students:
+        for key,value in student.items():
+            if key==find:
+                print(key,'s score is',value)
+                break
+            else:
+              
+                continue
+    print("student not found")
+
+def st_pass(students):
+    pas=[]
+    for student in students:
+        for key,value in student.items():
+            if value>= 60:
+                pas.append(student)
+            else:
+                continue
+    return pas
+
+"""found = False
+
+for student in students:
+    if found==1:
+        print
+        found = True
+        break
+
+if found == False:
+    見つからなかったと表示
+"""
 
 while 1:
-    try:
+    while 1:
         inputs=int(input('Select menu: '))
         if inputs==1:
             name=input("input the students name")
@@ -31,25 +63,17 @@ while 1:
     
         elif inputs==2:
             print(dic)
-            f=int(input("If you want to search student name press 1 if not 2: "))
-            if f==2:
-                break
-            elif f==1:
-                s=input("Enter the exact name: ")
-                n=0
-                for a,b in st.items():
-                    if a==s:
-                        print(a,'s score is',b)
-                        break
-                    elif len(st)==n:
-                        print("student not found")
-                    else:
-                        n+=1
-                        continue
-                
+            a=st_pass(dic)
+            print(a)
+
         elif inputs==3:
+            find=input("Enter the exact name: ")
+            st_search(dic,find)
+             
+        elif inputs==4:
             print("Exit")
             break
-    except:
-        print("invalid selection")
+    #except:
+   #     print("invalid selection")
         
+    
