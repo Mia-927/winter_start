@@ -15,6 +15,12 @@ forループ・条件分岐・データの検索・フィルターを使用
 ToDoアプリ
 辞書 ・リスト・関数・forループ・条件分岐・データの追加・更新・検索を使用
 
+### Project 4 : DataPrac(Java)
+データ型・変数・文字列出力練習
+
+### Project 5 : ArrayPrac(Java)
+データ型・配列練習
+
 ---
 
 # Java Practice for Next Semester & Python Review
@@ -33,3 +39,11 @@ for loops, Conditional statements, Searching and filtering data
 
 ToDo App
 Dictionaries, Lists, Functions, for loops, Conditional statements, Adding, updating, and searching data
+
+### Project 4 : DataPrac(Java)
+データ型・変数・文字列出力練習
+type, variables,print
+
+### Project 5 : ArrayPrac(Java)
+type & arrays
+
