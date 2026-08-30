@@ -1,7 +1,3 @@
-# My Journey
+# 次の学期用、Java練習
+# Java practice for next semester
 
-Hello! My name is Mia Johnson.  
-I am a student at Temple University from 2025, majoring in Computer Science.
-
-I am currently learning Python and Java,  
-sharpening my skills like a diamond 💎
